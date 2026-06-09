@@ -4,6 +4,34 @@
   min-height: 100vh;
   background: $bg-color;
   padding: 24px;
+  padding-top: 0;
+
+  .nav-bar {
+    display: flex;
+    align-items: center;
+    height: 88px;
+    padding: 0 8px;
+
+    .nav-back {
+      display: flex;
+      align-items: center;
+      padding: 12px 20px;
+      border-radius: $radius-lg;
+      background: $card-bg;
+      box-shadow: $shadow-card;
+
+      .nav-arrow {
+        font-size: 32px;
+        color: $text-primary;
+        margin-right: 8px;
+      }
+
+      .nav-text {
+        font-size: 26px;
+        color: $text-primary;
+      }
+    }
+  }
 
   .tool-header {
     text-align: center;

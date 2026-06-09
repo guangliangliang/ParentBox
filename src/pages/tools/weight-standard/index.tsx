@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import { View, Text, Picker } from '@tarojs/components'
-import { weightStandardData } from '../../../data/weight-standard'
+import Taro from '@tarojs/taro'
+import NavBar from '@/components/NavBar'
+import { weightStandardData } from '@/data/weight-standard'
 import './index.scss'
 
 export default function WeightStandard() {
@@ -17,6 +19,7 @@ export default function WeightStandard() {
 
   return (
     <View className='tool-page'>
+      <NavBar />
       <View className='tool-header'>
         <Text className='tool-icon'>⚖️</Text>
         <Text className='tool-title'>儿童体重标准</Text>

@@ -1,4 +1,9 @@
 type RelationMap = Record<string, string>
+import { useState } from 'react'
+import { View, Text } from '@tarojs/components'
+import Taro from '@tarojs/taro'
+import NavBar from '@/components/NavBar'
+import './index.scss'
 
 const maleMap: RelationMap = {
   '父': '爸爸', '母': '妈妈', '兄': '哥哥', '弟': '弟弟', '姐': '姐姐', '妹': '妹妹',
@@ -64,6 +69,7 @@ export default function Relation() {
 
   return (
     <View className='tool-page'>
+      <NavBar />
       <View className='tool-header'>
         <Text className='tool-icon'>👨‍👩‍👧‍👦</Text>
         <Text className='tool-title'>亲戚称呼计算器</Text>

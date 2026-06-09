@@ -1,4 +1,5 @@
 import { defineConfig } from '@tarojs/cli'
+import path from 'path'
 
 export default defineConfig({
   projectName: 'parentbox',
@@ -16,6 +17,13 @@ export default defineConfig({
   framework: 'react',
   compiler: {
     type: 'vite'
+  },
+  sass: {
+    api: 'modern-compiler',
+    silenceDeprecations: ['legacy-js-api', 'import']
+  },
+  alias: {
+    '@': path.resolve(__dirname, '..', 'src')
   },
   mini: {
     postcss: {

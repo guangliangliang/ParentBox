@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import { View, Text, Picker } from '@tarojs/components'
-import { heightStandardData } from '../../../data/height-standard'
+import Taro from '@tarojs/taro'
+import NavBar from '@/components/NavBar'
+import { heightStandardData } from '@/data/height-standard'
 import './index.scss'
 
 export default function HeightStandard() {
@@ -17,6 +19,7 @@ export default function HeightStandard() {
 
   return (
     <View className='tool-page'>
+      <NavBar />
       <View className='tool-header'>
         <Text className='tool-icon'>📏</Text>
         <Text className='tool-title'>儿童身高标准</Text>

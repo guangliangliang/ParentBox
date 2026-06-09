@@ -11,6 +11,11 @@ export type ToolItem = {
   keywords: string[]
 }
 
+let _selectedCategory = 'all'
+
+export const setSelectedCategory = (id: string) => { _selectedCategory = id }
+export const getSelectedCategory = () => _selectedCategory
+
 export const categories: CategoryItem[] = [
   { id: 'pregnancy', name: '孕期' },
   { id: 'newborn', name: '新生儿' },

@@ -90,10 +90,15 @@
     .hot-grid {
       display: flex;
       flex-wrap: wrap;
-      gap: 16px;
+
+      .hot-card-wrapper {
+        width: 50%;
+        box-sizing: border-box;
+        padding: 0 8px;
+        margin-bottom: 16px;
+      }
 
       .hot-card {
-        width: calc(50% - 8px);
         display: flex;
         align-items: center;
         background: $card-bg;
@@ -116,35 +121,38 @@
     }
   }
 
+  .category-grid {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 32px;
+
+    .category-card-wrapper {
+      width: 50%;
+      box-sizing: border-box;
+      padding: 0 8px;
+      margin-bottom: 16px;
+    }
+  }
+
   .category-card {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     background: $card-bg;
     border-radius: $radius-md;
-    padding: 28px 24px;
-    margin-top: 20px;
+    padding: 28px 16px;
     box-shadow: $shadow-card;
 
-    .category-left {
-      display: flex;
-      align-items: center;
-
-      .category-icon {
-        font-size: 44px;
-        margin-right: 20px;
-      }
-
-      .category-name {
-        font-size: 32px;
-        font-weight: 500;
-        color: $text-primary;
-      }
+    .category-icon {
+      font-size: 48px;
+      margin-bottom: 12px;
     }
 
-    .category-arrow {
-      font-size: 40px;
-      color: $text-hint;
+    .category-name {
+      font-size: 28px;
+      font-weight: 500;
+      color: $text-primary;
     }
   }
 

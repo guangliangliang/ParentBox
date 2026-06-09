@@ -1,7 +1,8 @@
 import { useState } from 'react'
 import { View, Text } from '@tarojs/components'
 import Taro from '@tarojs/taro'
-import { bagListData } from '../../../data/bag-list'
+import NavBar from '@/components/NavBar'
+import { bagListData } from '@/data/bag-list'
 import './index.scss'
 
 type BagCategory = { category: string; items: string[] }
@@ -20,6 +21,7 @@ export default function BagList() {
 
   return (
     <View className='tool-page'>
+      <NavBar />
       <View className='tool-header'>
         <Text className='tool-icon'>🎒</Text>
         <Text className='tool-title'>待产包清单</Text>

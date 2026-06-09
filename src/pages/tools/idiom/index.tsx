@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import { View, Text, Input } from '@tarojs/components'
-import { idiomData } from '../../../data/idiom'
+import Taro from '@tarojs/taro'
+import NavBar from '@/components/NavBar'
+import { idiomData } from '@/data/idiom'
 import './index.scss'
 
 function getLastChar(idiom: string): string {
@@ -24,6 +26,7 @@ export default function Idiom() {
 
   return (
     <View className='tool-page'>
+      <NavBar />
       <View className='tool-header'>
         <Text className='tool-icon'>📖</Text>
         <Text className='tool-title'>成语接龙</Text>

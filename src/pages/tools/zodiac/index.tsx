@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import { View, Text, Picker } from '@tarojs/components'
+import Taro from '@tarojs/taro'
+import NavBar from '@/components/NavBar'
 import './index.scss'
 
 const zodiacList = ['鼠', '牛', '虎', '兔', '龙', '蛇', '马', '羊', '猴', '鸡', '狗', '猪']
@@ -20,6 +22,7 @@ export default function Zodiac() {
 
   return (
     <View className='tool-page'>
+      <NavBar />
       <View className='tool-header'>
         <Text className='tool-icon'>🐉</Text>
         <Text className='tool-title'>生肖查询</Text>

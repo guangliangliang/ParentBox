@@ -1,7 +1,7 @@
 import { useState, useMemo } from 'react'
 import { View, Text, Input } from '@tarojs/components'
 import Taro from '@tarojs/taro'
-import { tools, categories, type ToolItem, type CategoryItem } from '../../data/tools'
+import { tools, categories, type ToolItem, type CategoryItem, setSelectedCategory } from '@/data/tools'
 import './index.scss'
 
 const categoryIcons: Record<string, string> = {
@@ -61,23 +61,26 @@ export default function Index() {
             <Text className='section-title'>🔥 热门功能</Text>
             <View className='hot-grid'>
               {hotTools.map(tool => (
-                <View key={tool.id} className='hot-card' onClick={() => Taro.navigateTo({ url: `/pages/tools/${tool.id}/index` })}>
-                  <Text className='hot-icon'>{tool.icon}</Text>
-                  <Text className='hot-name'>{tool.name}</Text>
+                <View key={tool.id} className='hot-card-wrapper'>
+                  <View className='hot-card' onClick={() => Taro.navigateTo({ url: `/pages/tools/${tool.id}/index` })}>
+                    <Text className='hot-icon'>{tool.icon}</Text>
+                    <Text className='hot-name'>{tool.name}</Text>
+                  </View>
                 </View>
               ))}
             </View>
           </View>
 
-          {categories.map(cat => (
-            <View key={cat.id} className='category-card' onClick={() => Taro.navigateTo({ url: `/pages/category/index?category=${cat.id}` })}>
-              <View className='category-left'>
-                <Text className='category-icon'>{categoryIcons[cat.id]}</Text>
-                <Text className='category-name'>{cat.name}</Text>
+          <View className='category-grid'>
+            {categories.map(cat => (
+              <View key={cat.id} className='category-card-wrapper'>
+                <View className='category-card' onClick={() => { setSelectedCategory(cat.id); Taro.navigateTo({ url: '/pages/category/index' }) }}>
+                  <Text className='category-icon'>{categoryIcons[cat.id]}</Text>
+                  <Text className='category-name'>{cat.name}</Text>
+                </View>
               </View>
-              <Text className='category-arrow'>›</Text>
-            </View>
-          ))}
+            ))}
+          </View>
         </>
       )}
 

@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { View, Text, Picker } from '@tarojs/components'
 import Taro from '@tarojs/taro'
+import NavBar from '@/components/NavBar'
 import './index.scss'
 
 export default function ExamCountdown() {
@@ -32,6 +33,7 @@ export default function ExamCountdown() {
 
   return (
     <View className='tool-page'>
+      <NavBar />
       <View className='tool-header'>
         <Text className='tool-icon'>⏰</Text>
         <Text className='tool-title'>考试倒计时</Text>

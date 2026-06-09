@@ -1,10 +1,13 @@
 import { View, Text } from '@tarojs/components'
-import { checkupList } from '../../../data/checkup'
+import Taro from '@tarojs/taro'
+import NavBar from '@/components/NavBar'
+import { checkupList } from '@/data/checkup'
 import './index.scss'
 
 export default function CheckupList() {
   return (
     <View className='tool-page'>
+      <NavBar />
       <View className='tool-header'>
         <Text className='tool-icon'>🏥</Text>
         <Text className='tool-title'>产检时间表</Text>

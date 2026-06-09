@@ -1,10 +1,13 @@
 import { View, Text } from '@tarojs/components'
-import { vaccineList } from '../../../data/vaccine'
+import Taro from '@tarojs/taro'
+import NavBar from '@/components/NavBar'
+import { vaccineList } from '@/data/vaccine'
 import './index.scss'
 
 export default function Vaccine() {
   return (
     <View className='tool-page'>
+      <NavBar />
       <View className='tool-header'>
         <Text className='tool-icon'>💉</Text>
         <Text className='tool-title'>疫苗时间表</Text>
