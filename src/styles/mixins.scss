@@ -11,21 +11,22 @@
 }
 
 @mixin card {
-  background: #FFFFFF;
+  background: #ffffff;
   border-radius: 16px;
   padding: 24px;
   margin: 16px;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(232, 238, 242, 0.95);
+  box-shadow: 0 12px 36px rgba(50, 76, 94, 0.08);
 }
 
 @mixin btn-primary {
-  background: #FF6B35;
-  color: #FFFFFF;
+  background: linear-gradient(135deg, #ff7a45, #f76f9c);
+  color: #ffffff;
   border-radius: 44px;
   padding: 20px 0;
   text-align: center;
   font-size: 32px;
-  font-weight: 500;
+  font-weight: 800;
   border: none;
 
   &:active {

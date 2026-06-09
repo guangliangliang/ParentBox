@@ -22,23 +22,28 @@ export default defineAppConfig({
     'pages/tools/constellation/index'
   ],
   tabBar: {
-    color: '#999999',
-    selectedColor: '#FF6B35',
+    color: '#9aa8b3',
+    selectedColor: '#ff7a45',
     backgroundColor: '#ffffff',
+    borderStyle: 'white',
     list: [
       {
         pagePath: 'pages/index/index',
-        text: '首页'
+        text: '首页',
+        iconPath: './assets/tab-home.png',
+        selectedIconPath: './assets/tab-home-active.png'
       },
       {
         pagePath: 'pages/category/index',
-        text: '分类'
+        text: '分类',
+        iconPath: './assets/tab-category.png',
+        selectedIconPath: './assets/tab-category-active.png'
       }
     ]
   },
   window: {
     backgroundTextStyle: 'light',
-    navigationBarBackgroundColor: '#FF6B35',
+    navigationBarBackgroundColor: '#ff7a45',
     navigationBarTitleText: '家长百宝箱',
     navigationBarTextStyle: 'white'
   }

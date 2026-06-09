@@ -2,9 +2,12 @@
 
 .tool-page {
   min-height: 100vh;
-  background: $bg-color;
+  background:
+    linear-gradient(180deg, #fff2e9 0%, #f7fbfa 300px),
+    $bg-color;
   padding: 24px;
   padding-top: 0;
+  color: $text-primary;
 
   .nav-bar {
     display: flex;
@@ -15,9 +18,10 @@
     .nav-back {
       display: flex;
       align-items: center;
-      padding: 12px 20px;
-      border-radius: $radius-lg;
+      padding: 12px 22px;
+      border-radius: 999px;
       background: $card-bg;
+      border: 1px solid rgba(232, 238, 242, 0.9);
       box-shadow: $shadow-card;
 
       .nav-arrow {
@@ -28,40 +32,69 @@
 
       .nav-text {
         font-size: 26px;
-        color: $text-primary;
+        color: $text-secondary;
+        font-weight: 600;
       }
     }
   }
 
   .tool-header {
     text-align: center;
-    padding: 32px 0;
-    .tool-icon { font-size: 64px; display: block; margin-bottom: 12px; }
-    .tool-title { font-size: 36px; font-weight: bold; color: $primary-color; }
+    padding: 34px 0 30px;
+    .tool-icon {
+      width: 108px;
+      height: 108px;
+      border-radius: 32px;
+      background: $card-bg;
+      box-shadow: $shadow-card;
+      display: block;
+      margin: 0 auto 18px;
+      font-size: 58px;
+      line-height: 108px;
+    }
+    .tool-title {
+      display: block;
+      font-size: 38px;
+      line-height: 1.25;
+      font-weight: 800;
+      color: $text-primary;
+    }
   }
 
   .form-card {
     background: $card-bg;
     border-radius: $radius-md;
-    padding: 28px;
+    padding: 30px;
+    border: 1px solid rgba(232, 238, 242, 0.95);
     box-shadow: $shadow-card;
     margin-bottom: 24px;
-    .label { font-size: 28px; color: $text-secondary; display: block; margin-bottom: 16px; }
+    .label {
+      font-size: 26px;
+      line-height: 1.25;
+      color: $text-secondary;
+      display: block;
+      margin-bottom: 14px;
+      font-weight: 600;
+    }
     .picker-value {
-      background: $bg-color;
+      background: #f7fafb;
+      border: 1px solid $border-color;
       border-radius: $radius-sm;
-      padding: 20px;
+      padding: 20px 22px;
       font-size: 28px;
       color: $text-primary;
+      margin-bottom: 22px;
     }
     .input-field {
-      background: $bg-color;
+      background: #f7fafb;
+      border: 1px solid $border-color;
       border-radius: $radius-sm;
-      padding: 20px;
+      padding: 20px 22px;
       font-size: 28px;
       color: $text-primary;
       width: 100%;
       box-sizing: border-box;
+      margin-bottom: 22px;
     }
     .gender-row, .op-row {
       display: flex;
@@ -72,33 +105,38 @@
       flex: 1;
       min-width: 120px;
       text-align: center;
-      padding: 16px 0;
-      border-radius: $radius-sm;
-      background: $bg-color;
+      padding: 18px 0;
+      border-radius: 999px;
+      background: #f7fafb;
+      border: 1px solid $border-color;
       font-size: 28px;
       color: $text-primary;
+      font-weight: 600;
       &.active {
-        background: $primary-color;
+        background: linear-gradient(135deg, $primary-color, $warm-pink);
+        border-color: transparent;
         color: #fff;
       }
     }
   }
 
   .calc-btn {
-    background: $primary-color;
+    background: linear-gradient(135deg, $primary-color, $warm-pink);
     color: #fff;
     text-align: center;
-    padding: 24px;
-    border-radius: $radius-md;
+    padding: 25px 24px;
+    border-radius: 999px;
     font-size: 32px;
-    font-weight: 500;
+    font-weight: 800;
     margin-bottom: 24px;
+    box-shadow: 0 12px 28px rgba(255, 122, 69, 0.2);
   }
 
   .result-card {
     background: $card-bg;
     border-radius: $radius-md;
-    padding: 28px;
+    padding: 30px;
+    border: 1px solid rgba(232, 238, 242, 0.95);
     box-shadow: $shadow-card;
     .result-item {
       display: flex;
@@ -107,17 +145,18 @@
       padding: 20px 0;
       &:not(:last-child) { border-bottom: 1px solid $border-color; }
       .result-label { font-size: 28px; color: $text-secondary; }
-      .result-value { font-size: 32px; font-weight: bold; color: $primary-color; }
+      .result-value { font-size: 32px; font-weight: 800; color: $primary-color; }
     }
   }
 
   .list-card {
     background: $card-bg;
     border-radius: $radius-md;
-    padding: 28px;
+    padding: 30px;
+    border: 1px solid rgba(232, 238, 242, 0.95);
     box-shadow: $shadow-card;
     margin-bottom: 16px;
-    .list-title { font-size: 30px; font-weight: bold; color: $primary-color; display: block; margin-bottom: 12px; }
+    .list-title { font-size: 30px; font-weight: 800; color: $text-primary; display: block; margin-bottom: 12px; }
     .list-row {
       display: flex;
       justify-content: space-between;
@@ -132,12 +171,13 @@
   .countdown-card {
     background: $card-bg;
     border-radius: $radius-md;
-    padding: 48px 28px;
+    padding: 50px 30px;
+    border: 1px solid rgba(232, 238, 242, 0.95);
     box-shadow: $shadow-card;
     text-align: center;
     .countdown-number {
       font-size: 96px;
-      font-weight: bold;
+      font-weight: 800;
       color: $primary-color;
       display: block;
     }
@@ -161,7 +201,8 @@
   .questions-card {
     background: $card-bg;
     border-radius: $radius-md;
-    padding: 28px;
+    padding: 30px;
+    border: 1px solid rgba(232, 238, 242, 0.95);
     box-shadow: $shadow-card;
     .question-row {
       display: flex;
@@ -176,7 +217,8 @@
       }
       .question-input {
         flex: 1;
-        background: $bg-color;
+        background: #f7fafb;
+        border: 1px solid $border-color;
         border-radius: $radius-sm;
         padding: 12px 16px;
         font-size: 28px;
@@ -194,7 +236,8 @@
   .result-list {
     background: $card-bg;
     border-radius: $radius-md;
-    padding: 28px;
+    padding: 30px;
+    border: 1px solid rgba(232, 238, 242, 0.95);
     box-shadow: $shadow-card;
     .result-count {
       font-size: 28px;
@@ -204,8 +247,8 @@
     }
     .idiom-item {
       display: inline-block;
-      background: $bg-color;
-      border-radius: $radius-sm;
+      background: #fff4ed;
+      border-radius: 999px;
       padding: 12px 24px;
       margin: 8px 8px 8px 0;
       .idiom-text { font-size: 28px; color: $primary-color; }
@@ -221,11 +264,12 @@
   .chain-display {
     background: $card-bg;
     border-radius: $radius-md;
-    padding: 28px;
+    padding: 30px;
+    border: 1px solid rgba(232, 238, 242, 0.95);
     box-shadow: $shadow-card;
     margin-bottom: 24px;
     text-align: center;
-    .chain-text { font-size: 32px; color: $primary-color; font-weight: 500; }
+    .chain-text { font-size: 32px; color: $primary-color; font-weight: 800; }
     .chain-hint { font-size: 28px; color: $text-hint; }
   }
 
