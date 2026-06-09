@@ -1,0 +1,67 @@
+@import '../../styles/variables.scss';
+
+.category-page {
+  min-height: 100vh;
+  background-color: $bg-color;
+  padding: 24px;
+  padding-bottom: 120px;
+
+  .tabs {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 16px;
+    padding: 16px 0;
+    white-space: nowrap;
+
+    .tab {
+      flex-shrink: 0;
+      padding: 12px 28px;
+      border-radius: $radius-lg;
+      font-size: 26px;
+      color: $text-secondary;
+      background: $card-bg;
+
+      &-active {
+        background: $primary-color;
+        color: #fff;
+        font-weight: 500;
+      }
+    }
+  }
+
+  .tool-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 20px;
+
+    .tool-card {
+      width: calc(50% - 8px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: $card-bg;
+      border-radius: $radius-md;
+      padding: 32px 16px;
+      box-shadow: $shadow-card;
+
+      .tool-icon {
+        font-size: 56px;
+        margin-bottom: 16px;
+      }
+
+      .tool-name {
+        font-size: 28px;
+        color: $text-primary;
+        font-weight: 500;
+      }
+    }
+  }
+
+  .ad-container {
+    margin-top: 40px;
+    text-align: center;
+  }
+}

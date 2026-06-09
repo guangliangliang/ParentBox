@@ -1,0 +1,34 @@
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin card {
+  background: #FFFFFF;
+  border-radius: 16px;
+  padding: 24px;
+  margin: 16px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+}
+
+@mixin btn-primary {
+  background: #FF6B35;
+  color: #FFFFFF;
+  border-radius: 44px;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 32px;
+  font-weight: 500;
+  border: none;
+
+  &:active {
+    opacity: 0.85;
+  }
+}

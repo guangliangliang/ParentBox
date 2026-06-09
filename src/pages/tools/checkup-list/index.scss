@@ -1,0 +1,54 @@
+@import '../../../styles/variables.scss';
+
+.tool-page {
+  min-height: 100vh;
+  background: $bg-color;
+  padding: 24px;
+
+  .tool-header {
+    text-align: center;
+    padding: 32px 0;
+    .tool-icon { font-size: 64px; display: block; margin-bottom: 12px; }
+    .tool-title { font-size: 36px; font-weight: bold; color: $primary-color; }
+  }
+
+  .timeline {
+    .timeline-item {
+      display: flex;
+      position: relative;
+      padding-bottom: 32px;
+      padding-left: 40px;
+
+      &:not(:last-child)::before {
+        content: '';
+        position: absolute;
+        left: 11px;
+        top: 24px;
+        bottom: 0;
+        width: 2px;
+        background: $border-color;
+      }
+
+      .timeline-dot {
+        position: absolute;
+        left: 4px;
+        top: 8px;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background: $primary-color;
+      }
+
+      .timeline-content {
+        background: $card-bg;
+        border-radius: $radius-md;
+        padding: 24px;
+        box-shadow: $shadow-card;
+        flex: 1;
+        .timeline-week { font-size: 28px; font-weight: bold; color: $primary-color; display: block; }
+        .timeline-name { font-size: 28px; color: $text-primary; display: block; margin-top: 8px; }
+        .timeline-desc { font-size: 24px; color: $text-hint; display: block; margin-top: 4px; }
+      }
+    }
+  }
+}
