@@ -6,6 +6,23 @@ page {
   color: $text-primary;
   font-size: 28px;
   box-sizing: border-box;
+  height: 100vh;
+  overflow: hidden;
+}
+
+html,
+body,
+#app {
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.taro_page {
+  height: 100vh !important;
+  overflow-y: hidden !important;
+  overflow-x: hidden !important;
 }
 
 .container {
