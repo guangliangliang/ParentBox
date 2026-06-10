@@ -44,7 +44,7 @@ export default defineAppConfig({
   window: {
     backgroundTextStyle: 'light',
     navigationBarBackgroundColor: '#ff7a45',
-    navigationBarTitleText: '家长百宝箱',
+    navigationBarTitleText: '家长工具库',
     navigationBarTextStyle: 'white'
   }
 })

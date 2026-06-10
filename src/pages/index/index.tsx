@@ -29,7 +29,7 @@ export default function Index() {
     <View className='index-page'>
       <View className='fixed-header'>
         <View className='header'>
-          <Text className='title'>家长百宝箱</Text>
+          <Text className='title'>家长工具库</Text>
           <Text className='subtitle'>陪伴孩子成长每一步</Text>
         </View>
 
