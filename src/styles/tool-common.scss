@@ -1,12 +1,6 @@
 @import './variables.scss';
 
 .tool-page {
-  min-height: 100vh;
-  background:
-    linear-gradient(180deg, #fff2e9 0%, #f7fbfa 300px),
-    $bg-color;
-  padding: 24px;
-  padding-top: 0;
   color: $text-primary;
 
   .nav-bar {
