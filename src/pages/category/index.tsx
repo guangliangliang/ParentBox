@@ -1,11 +1,20 @@
 import { useState, useMemo } from 'react'
 import { View, Text } from '@tarojs/components'
-import Taro from '@tarojs/taro'
-import { tools, categories, getSelectedCategory } from '@/data/tools'
+import Taro, { useDidShow } from '@tarojs/taro'
+import { tools, categories, getAndClearPendingCategory } from '@/data/tools'
 import './index.scss'
 
 export default function Category() {
-  const [activeCategory, setActiveCategory] = useState(getSelectedCategory)
+  const [activeCategory, setActiveCategory] = useState('all')
+
+  useDidShow(() => {
+    const pendingCategory = getAndClearPendingCategory()
+    if (pendingCategory) {
+      setActiveCategory(pendingCategory)
+    } else {
+      setActiveCategory('all')
+    }
+  })
 
   const filteredTools = useMemo(() => {
     if (activeCategory === 'all') return tools

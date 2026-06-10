@@ -11,10 +11,14 @@ export type ToolItem = {
   keywords: string[]
 }
 
-let _selectedCategory = 'all'
+let _pendingCategory: string | null = null
 
-export const setSelectedCategory = (id: string) => { _selectedCategory = id }
-export const getSelectedCategory = () => _selectedCategory
+export const setPendingCategory = (id: string) => { _pendingCategory = id }
+export const getAndClearPendingCategory = () => {
+  const result = _pendingCategory
+  _pendingCategory = null
+  return result
+}
 
 export const categories: CategoryItem[] = [
   { id: 'pregnancy', name: '孕期' },

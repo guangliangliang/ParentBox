@@ -1,7 +1,7 @@
 import { useState, useMemo } from 'react'
 import { View, Text, Input } from '@tarojs/components'
 import Taro from '@tarojs/taro'
-import { tools, categories, type ToolItem, type CategoryItem, setSelectedCategory } from '@/data/tools'
+import { tools, categories, type ToolItem, type CategoryItem, setPendingCategory } from '@/data/tools'
 import './index.scss'
 
 const categoryIcons: Record<string, string> = {
@@ -77,7 +77,7 @@ export default function Index() {
             <View className='category-grid'>
               {categories.map(cat => (
                 <View key={cat.id} className='category-card-wrapper'>
-                  <View className='category-card' onClick={() => { setSelectedCategory(cat.id); Taro.navigateTo({ url: '/pages/category/index' }) }}>
+                  <View className='category-card' onClick={() => { setPendingCategory(cat.id); Taro.switchTab({ url: '/pages/category/index' }) }}>
                     <Text className='category-icon'>{categoryIcons[cat.id]}</Text>
                     <Text className='category-name'>{cat.name}</Text>
                   </View>
