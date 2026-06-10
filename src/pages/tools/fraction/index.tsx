@@ -65,38 +65,42 @@ export default function Fraction() {
   return (
     <View className='tool-page'>
       <NavBar />
-      <View className='tool-header'>
-        <Text className='tool-icon'>🔢</Text>
-        <Text className='tool-title'>分数练习</Text>
-      </View>
-      <View className='form-card'>
-        <Text className='label'>运算类型</Text>
-        <View className='op-row'>
-          <View className={`op-btn ${op === '+' ? 'active' : ''}`} onClick={() => setOp('+')}><Text>加法</Text></View>
-          <View className={`op-btn ${op === '-' ? 'active' : ''}`} onClick={() => setOp('-')}><Text>减法</Text></View>
+      <View className='fixed-header'>
+        <View className='tool-header'>
+          <Text className='tool-icon'>🔢</Text>
+          <Text className='tool-title'>分数练习</Text>
         </View>
       </View>
-      <View className='calc-btn' onClick={generate}>生成题目</View>
-      {questions.length > 0 && (
-        <View className='questions-card'>
-          {questions.map((q, i) => (
-            <View key={i} className='question-row'>
-              <Text className='question-text'>{q.question} =</Text>
-              <Input
-                className='question-input'
-                placeholder='如 1/3'
-                value={answers[i] || ''}
-                onInput={e => check(i, e.detail.value)}
-              />
-              {answers[i] && (
-                <Text className={`answer-status ${isCorrect(i) ? 'correct' : 'wrong'}`}>
-                  {isCorrect(i) ? '✓' : '✗'}
-                </Text>
-              )}
-            </View>
-          ))}
+      <View className='scroll-content'>
+        <View className='form-card'>
+          <Text className='label'>运算类型</Text>
+          <View className='op-row'>
+            <View className={`op-btn ${op === '+' ? 'active' : ''}`} onClick={() => setOp('+')}><Text>加法</Text></View>
+            <View className={`op-btn ${op === '-' ? 'active' : ''}`} onClick={() => setOp('-')}><Text>减法</Text></View>
+          </View>
         </View>
-      )}
+        <View className='calc-btn' onClick={generate}>生成题目</View>
+        {questions.length > 0 && (
+          <View className='questions-card'>
+            {questions.map((q, i) => (
+              <View key={i} className='question-row'>
+                <Text className='question-text'>{q.question} =</Text>
+                <Input
+                  className='question-input'
+                  placeholder='如 1/3'
+                  value={answers[i] || ''}
+                  onInput={e => check(i, e.detail.value)}
+                />
+                {answers[i] && (
+                  <Text className={`answer-status ${isCorrect(i) ? 'correct' : 'wrong'}`}>
+                    {isCorrect(i) ? '✓' : '✗'}
+                  </Text>
+                )}
+              </View>
+            ))}
+          </View>
+        )}
+      </View>
     </View>
   )
 }

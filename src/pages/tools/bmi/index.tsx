@@ -27,29 +27,33 @@ export default function BMI() {
   return (
     <View className='tool-page'>
       <NavBar />
-      <View className='tool-header'>
-        <Text className='tool-icon'>📊</Text>
-        <Text className='tool-title'>BMI计算</Text>
-      </View>
-      <View className='form-card'>
-        <Text className='label'>身高 (cm)</Text>
-        <Input className='input-field' type='digit' placeholder='请输入身高' value={height} onInput={e => setHeight(e.detail.value)} />
-        <Text className='label'>体重 (kg)</Text>
-        <Input className='input-field' type='digit' placeholder='请输入体重' value={weight} onInput={e => setWeight(e.detail.value)} />
-      </View>
-      <View className='calc-btn' onClick={calculate}>计算BMI</View>
-      {result && (
-        <View className='result-card'>
-          <View className='result-item'>
-            <Text className='result-label'>BMI值</Text>
-            <Text className='result-value'>{result.bmi}</Text>
-          </View>
-          <View className='result-item'>
-            <Text className='result-label'>健康等级</Text>
-            <Text className='result-value'>{result.level}</Text>
-          </View>
+      <View className='fixed-header'>
+        <View className='tool-header'>
+          <Text className='tool-icon'>📊</Text>
+          <Text className='tool-title'>BMI计算</Text>
         </View>
-      )}
+      </View>
+      <View className='scroll-content'>
+        <View className='form-card'>
+          <Text className='label'>身高 (cm)</Text>
+          <Input className='input-field' type='digit' placeholder='请输入身高' value={height} onInput={e => setHeight(e.detail.value)} />
+          <Text className='label'>体重 (kg)</Text>
+          <Input className='input-field' type='digit' placeholder='请输入体重' value={weight} onInput={e => setWeight(e.detail.value)} />
+        </View>
+        <View className='calc-btn' onClick={calculate}>计算BMI</View>
+        {result && (
+          <View className='result-card'>
+            <View className='result-item'>
+              <Text className='result-label'>BMI值</Text>
+              <Text className='result-value'>{result.bmi}</Text>
+            </View>
+            <View className='result-item'>
+              <Text className='result-label'>健康等级</Text>
+              <Text className='result-value'>{result.level}</Text>
+            </View>
+          </View>
+        )}
+      </View>
     </View>
   )
 }

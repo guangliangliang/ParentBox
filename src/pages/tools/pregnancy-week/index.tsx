@@ -25,32 +25,36 @@ export default function PregnancyWeek() {
   return (
     <View className='tool-page'>
       <NavBar />
-      <View className='tool-header'>
-        <Text className='tool-icon'>📅</Text>
-        <Text className='tool-title'>孕周计算</Text>
-      </View>
-      <View className='form-card'>
-        <Text className='label'>末次月经日期</Text>
-        <Picker mode='date' onChange={e => calculate(e.detail.value)}>
-          <View className='picker-value'>{date || '请选择日期'}</View>
-        </Picker>
-      </View>
-      {result && (
-        <View className='result-card'>
-          <View className='result-item'>
-            <Text className='result-label'>当前孕周</Text>
-            <Text className='result-value'>{result.weeks}周</Text>
-          </View>
-          <View className='result-item'>
-            <Text className='result-label'>剩余天数</Text>
-            <Text className='result-value'>{result.days}天</Text>
-          </View>
-          <View className='result-item'>
-            <Text className='result-label'>已孕天数</Text>
-            <Text className='result-value'>{result.totalDays}天</Text>
-          </View>
+      <View className='fixed-header'>
+        <View className='tool-header'>
+          <Text className='tool-icon'>📅</Text>
+          <Text className='tool-title'>孕周计算</Text>
         </View>
-      )}
+      </View>
+      <View className='scroll-content'>
+        <View className='form-card'>
+          <Text className='label'>末次月经日期</Text>
+          <Picker mode='date' onChange={e => calculate(e.detail.value)}>
+            <View className='picker-value'>{date || '请选择日期'}</View>
+          </Picker>
+        </View>
+        {result && (
+          <View className='result-card'>
+            <View className='result-item'>
+              <Text className='result-label'>当前孕周</Text>
+              <Text className='result-value'>{result.weeks}周</Text>
+            </View>
+            <View className='result-item'>
+              <Text className='result-label'>剩余天数</Text>
+              <Text className='result-value'>{result.days}天</Text>
+            </View>
+            <View className='result-item'>
+              <Text className='result-label'>已孕天数</Text>
+              <Text className='result-value'>{result.totalDays}天</Text>
+            </View>
+          </View>
+        )}
+      </View>
     </View>
   )
 }

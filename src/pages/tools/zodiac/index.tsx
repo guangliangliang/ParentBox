@@ -23,25 +23,29 @@ export default function Zodiac() {
   return (
     <View className='tool-page'>
       <NavBar />
-      <View className='tool-header'>
-        <Text className='tool-icon'>🐉</Text>
-        <Text className='tool-title'>生肖查询</Text>
-      </View>
-      <View className='form-card'>
-        <Text className='label'>出生年份</Text>
-        <Picker mode='selector' range={years} value={yearIdx} onChange={e => setYearIdx(Number(e.detail.value))}>
-          <View className='picker-value'>{years[yearIdx]}年</View>
-        </Picker>
-      </View>
-      <View className='calc-btn' onClick={calculate}>查询生肖</View>
-      {result && (
-        <View className='result-card'>
-          <View className='result-item'>
-            <Text className='result-label'>生肖</Text>
-            <Text className='result-value'>{result}</Text>
-          </View>
+      <View className='fixed-header'>
+        <View className='tool-header'>
+          <Text className='tool-icon'>🐉</Text>
+          <Text className='tool-title'>生肖查询</Text>
         </View>
-      )}
+      </View>
+      <View className='scroll-content'>
+        <View className='form-card'>
+          <Text className='label'>出生年份</Text>
+          <Picker mode='selector' range={years} value={yearIdx} onChange={e => setYearIdx(Number(e.detail.value))}>
+            <View className='picker-value'>{years[yearIdx]}年</View>
+          </Picker>
+        </View>
+        <View className='calc-btn' onClick={calculate}>查询生肖</View>
+        {result && (
+          <View className='result-card'>
+            <View className='result-item'>
+              <Text className='result-label'>生肖</Text>
+              <Text className='result-value'>{result}</Text>
+            </View>
+          </View>
+        )}
+      </View>
     </View>
   )
 }

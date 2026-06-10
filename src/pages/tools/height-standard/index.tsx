@@ -20,33 +20,37 @@ export default function HeightStandard() {
   return (
     <View className='tool-page'>
       <NavBar />
-      <View className='tool-header'>
-        <Text className='tool-icon'>📏</Text>
-        <Text className='tool-title'>儿童身高标准</Text>
-      </View>
-      <View className='form-card'>
-        <Text className='label'>性别</Text>
-        <Picker mode='selector' range={['男', '女']} value={gender} onChange={e => setGender(Number(e.detail.value))}>
-          <View className='picker-value'>{gender === 0 ? '男' : '女'}</View>
-        </Picker>
-        <Text className='label' style={{ marginTop: '20px' }}>年龄</Text>
-        <Picker mode='selector' range={ages} value={ageIdx} onChange={e => setAgeIdx(Number(e.detail.value))}>
-          <View className='picker-value'>{ages[ageIdx]}</View>
-        </Picker>
-      </View>
-      <View className='calc-btn' onClick={calculate}>查询</View>
-      {result && (
-        <View className='result-card'>
-          <View className='result-item'>
-            <Text className='result-label'>标准身高范围</Text>
-            <Text className='result-value'>{result.range} cm</Text>
-          </View>
-          <View className='result-item'>
-            <Text className='result-label'>中位数</Text>
-            <Text className='result-value'>{result.median} cm</Text>
-          </View>
+      <View className='fixed-header'>
+        <View className='tool-header'>
+          <Text className='tool-icon'>📏</Text>
+          <Text className='tool-title'>儿童身高标准</Text>
         </View>
-      )}
+      </View>
+      <View className='scroll-content'>
+        <View className='form-card'>
+          <Text className='label'>性别</Text>
+          <Picker mode='selector' range={['男', '女']} value={gender} onChange={e => setGender(Number(e.detail.value))}>
+            <View className='picker-value'>{gender === 0 ? '男' : '女'}</View>
+          </Picker>
+          <Text className='label' style={{ marginTop: '20px' }}>年龄</Text>
+          <Picker mode='selector' range={ages} value={ageIdx} onChange={e => setAgeIdx(Number(e.detail.value))}>
+            <View className='picker-value'>{ages[ageIdx]}</View>
+          </Picker>
+        </View>
+        <View className='calc-btn' onClick={calculate}>查询</View>
+        {result && (
+          <View className='result-card'>
+            <View className='result-item'>
+              <Text className='result-label'>标准身高范围</Text>
+              <Text className='result-value'>{result.range} cm</Text>
+            </View>
+            <View className='result-item'>
+              <Text className='result-label'>中位数</Text>
+              <Text className='result-value'>{result.median} cm</Text>
+            </View>
+          </View>
+        )}
+      </View>
     </View>
   )
 }

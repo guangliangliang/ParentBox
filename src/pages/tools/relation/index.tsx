@@ -70,41 +70,45 @@ export default function Relation() {
   return (
     <View className='tool-page'>
       <NavBar />
-      <View className='tool-header'>
-        <Text className='tool-icon'>👨‍👩‍👧‍👦</Text>
-        <Text className='tool-title'>亲戚称呼计算器</Text>
-      </View>
-      <View className='chain-display'>
-        {chain.length > 0 ? (
-          <Text className='chain-text'>我→{chain.join('')}</Text>
-        ) : (
-          <Text className='chain-hint'>点击下方按钮选择关系</Text>
-        )}
-      </View>
-      <View className='form-card'>
-        <Text className='label'>选择关系链</Text>
-        <View className='op-row'>
-          {steps[0].options.map(opt => (
-            <View key={opt} className='op-btn' onClick={() => addRelation(opt)}>
-              <Text>{opt.replace('的', '')}</Text>
-            </View>
-          ))}
+      <View className='fixed-header'>
+        <View className='tool-header'>
+          <Text className='tool-icon'>👨‍👩‍👧‍👦</Text>
+          <Text className='tool-title'>亲戚称呼计算器</Text>
         </View>
       </View>
-      <View className='btn-row'>
-        <View className='calc-btn' style={{ flex: 1, marginRight: '12px' }} onClick={reset}>重置</View>
-        {chain.length > 0 && (
-          <View className='calc-btn' style={{ flex: 1, marginLeft: '12px' }} onClick={() => setChain(prev => prev.slice(0, -1))}>回退</View>
-        )}
-      </View>
-      {result && (
-        <View className='result-card'>
-          <View className='result-item'>
-            <Text className='result-label'>称呼</Text>
-            <Text className='result-value'>{result}</Text>
+      <View className='scroll-content'>
+        <View className='chain-display'>
+          {chain.length > 0 ? (
+            <Text className='chain-text'>我→{chain.join('')}</Text>
+          ) : (
+            <Text className='chain-hint'>点击下方按钮选择关系</Text>
+          )}
+        </View>
+        <View className='form-card'>
+          <Text className='label'>选择关系链</Text>
+          <View className='op-row'>
+            {steps[0].options.map(opt => (
+              <View key={opt} className='op-btn' onClick={() => addRelation(opt)}>
+                <Text>{opt.replace('的', '')}</Text>
+              </View>
+            ))}
           </View>
         </View>
-      )}
+        <View className='btn-row'>
+          <View className='calc-btn' style={{ flex: 1, marginRight: '12px' }} onClick={reset}>重置</View>
+          {chain.length > 0 && (
+            <View className='calc-btn' style={{ flex: 1, marginLeft: '12px' }} onClick={() => setChain(prev => prev.slice(0, -1))}>回退</View>
+          )}
+        </View>
+        {result && (
+          <View className='result-card'>
+            <View className='result-item'>
+              <Text className='result-label'>称呼</Text>
+              <Text className='result-value'>{result}</Text>
+            </View>
+          </View>
+        )}
+      </View>
     </View>
   )
 }

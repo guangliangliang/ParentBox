@@ -46,29 +46,33 @@ export default function Constellation() {
   return (
     <View className='tool-page'>
       <NavBar />
-      <View className='tool-header'>
-        <Text className='tool-icon'>⭐</Text>
-        <Text className='tool-title'>星座查询</Text>
-      </View>
-      <View className='form-card'>
-        <Text className='label'>生日月份</Text>
-        <Picker mode='selector' range={months} value={monthIdx} onChange={e => setMonthIdx(Number(e.detail.value))}>
-          <View className='picker-value'>{months[monthIdx]}</View>
-        </Picker>
-        <Text className='label' style={{ marginTop: '20px' }}>生日日期</Text>
-        <Picker mode='selector' range={days31} value={dayIdx} onChange={e => setDayIdx(Number(e.detail.value))}>
-          <View className='picker-value'>{days31[dayIdx]}</View>
-        </Picker>
-      </View>
-      <View className='calc-btn' onClick={calculate}>查询星座</View>
-      {result && (
-        <View className='result-card'>
-          <View className='result-item'>
-            <Text className='result-label'>星座</Text>
-            <Text className='result-value'>{result}</Text>
-          </View>
+      <View className='fixed-header'>
+        <View className='tool-header'>
+          <Text className='tool-icon'>⭐</Text>
+          <Text className='tool-title'>星座查询</Text>
         </View>
-      )}
+      </View>
+      <View className='scroll-content'>
+        <View className='form-card'>
+          <Text className='label'>生日月份</Text>
+          <Picker mode='selector' range={months} value={monthIdx} onChange={e => setMonthIdx(Number(e.detail.value))}>
+            <View className='picker-value'>{months[monthIdx]}</View>
+          </Picker>
+          <Text className='label' style={{ marginTop: '20px' }}>生日日期</Text>
+          <Picker mode='selector' range={days31} value={dayIdx} onChange={e => setDayIdx(Number(e.detail.value))}>
+            <View className='picker-value'>{days31[dayIdx]}</View>
+          </Picker>
+        </View>
+        <View className='calc-btn' onClick={calculate}>查询星座</View>
+        {result && (
+          <View className='result-card'>
+            <View className='result-item'>
+              <Text className='result-label'>星座</Text>
+              <Text className='result-value'>{result}</Text>
+            </View>
+          </View>
+        )}
+      </View>
     </View>
   )
 }

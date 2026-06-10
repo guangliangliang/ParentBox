@@ -50,42 +50,46 @@ export default function OralMath() {
   return (
     <View className='tool-page'>
       <NavBar />
-      <View className='tool-header'>
-        <Text className='tool-icon'>🧮</Text>
-        <Text className='tool-title'>口算生成器</Text>
-      </View>
-      <View className='form-card'>
-        <Text className='label'>运算类型</Text>
-        <View className='op-row'>
-          {ops.map(op => (
-            <View key={op} className={`op-btn ${selectedOp === op ? 'active' : ''}`} onClick={() => setSelectedOp(op)}>
-              <Text>{op}</Text>
-            </View>
-          ))}
+      <View className='fixed-header'>
+        <View className='tool-header'>
+          <Text className='tool-icon'>🧮</Text>
+          <Text className='tool-title'>口算生成器</Text>
         </View>
       </View>
-      <View className='calc-btn' onClick={generate}>生成题目</View>
-      {questions.length > 0 && (
-        <View className='questions-card'>
-          {questions.map((q, i) => (
-            <View key={i} className='question-row'>
-              <Text className='question-text'>{q.question}</Text>
-              <Input
-                className='question-input'
-                type='number'
-                placeholder='?'
-                value={answers[i] || ''}
-                onInput={e => checkAnswer(i, e.detail.value)}
-              />
-              {answers[i] && (
-                <Text className={`answer-status ${parseInt(answers[i]) === q.answer ? 'correct' : 'wrong'}`}>
-                  {parseInt(answers[i]) === q.answer ? '✓' : '✗'}
-                </Text>
-              )}
-            </View>
-          ))}
+      <View className='scroll-content'>
+        <View className='form-card'>
+          <Text className='label'>运算类型</Text>
+          <View className='op-row'>
+            {ops.map(op => (
+              <View key={op} className={`op-btn ${selectedOp === op ? 'active' : ''}`} onClick={() => setSelectedOp(op)}>
+                <Text>{op}</Text>
+              </View>
+            ))}
+          </View>
         </View>
-      )}
+        <View className='calc-btn' onClick={generate}>生成题目</View>
+        {questions.length > 0 && (
+          <View className='questions-card'>
+            {questions.map((q, i) => (
+              <View key={i} className='question-row'>
+                <Text className='question-text'>{q.question}</Text>
+                <Input
+                  className='question-input'
+                  type='number'
+                  placeholder='?'
+                  value={answers[i] || ''}
+                  onInput={e => checkAnswer(i, e.detail.value)}
+                />
+                {answers[i] && (
+                  <Text className={`answer-status ${parseInt(answers[i]) === q.answer ? 'correct' : 'wrong'}`}>
+                    {parseInt(answers[i]) === q.answer ? '✓' : '✗'}
+                  </Text>
+                )}
+              </View>
+            ))}
+          </View>
+        )}
+      </View>
     </View>
   )
 }
