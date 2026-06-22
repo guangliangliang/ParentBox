@@ -16,12 +16,12 @@ export default defineConfig({
   plugins: ['@tarojs/plugin-framework-react'],
   framework: 'react',
   compiler: {
-    type: 'vite'
+    type: 'webpack5',
+    prebundle: {
+      enable: false
+    }
   },
-  sass: {
-    api: 'modern-compiler',
-    silenceDeprecations: ['legacy-js-api', 'import']
-  },
+
   alias: {
     '@': path.resolve(__dirname, '..', 'src')
   },
