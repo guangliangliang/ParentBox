@@ -12,7 +12,9 @@ function getZodiac(year: number): string {
 }
 
 export default function Zodiac() {
-  const [yearIdx, setYearIdx] = useState(40)
+  const currentYear = new Date().getFullYear()
+  const defaultIdx = Math.max(0, Math.min(99, currentYear - 1940))
+  const [yearIdx, setYearIdx] = useState(defaultIdx)
   const [result, setResult] = useState<string | null>(null)
 
   const calculate = () => {

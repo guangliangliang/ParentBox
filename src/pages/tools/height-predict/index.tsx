@@ -42,9 +42,9 @@ export default function HeightPredict() {
             </View>
           </View>
           <Text className='label'>父亲身高 (cm)</Text>
-          <Input className='input-field' type='digit' placeholder='请输入父亲身高' value={fatherHeight} onInput={e => setFatherHeight(e.detail.value)} />
+          <Input className='input-field input-field-center h5-text-center' type='digit' placeholder='请输入父亲身高' placeholderClass='input-placeholder' value={fatherHeight} onInput={e => setFatherHeight(e.detail.value)} style={{ textAlign: 'center' }} />
           <Text className='label'>母亲身高 (cm)</Text>
-          <Input className='input-field' type='digit' placeholder='请输入母亲身高' value={motherHeight} onInput={e => setMotherHeight(e.detail.value)} />
+          <Input className='input-field input-field-center h5-text-center' type='digit' placeholder='请输入母亲身高' placeholderClass='input-placeholder' value={motherHeight} onInput={e => setMotherHeight(e.detail.value)} style={{ textAlign: 'center' }} />
         </View>
         <View className='calc-btn' onClick={calculate}>预测身高</View>
         {result !== null && (

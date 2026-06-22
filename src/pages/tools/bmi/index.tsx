@@ -36,9 +36,9 @@ export default function BMI() {
       <View className='scroll-content'>
         <View className='form-card'>
           <Text className='label'>身高 (cm)</Text>
-          <Input className='input-field' type='digit' placeholder='请输入身高' value={height} onInput={e => setHeight(e.detail.value)} />
+          <Input className='input-field input-field-center h5-text-center' type='digit' placeholder='请输入身高' placeholderClass='input-placeholder' value={height} onInput={e => setHeight(e.detail.value)} style={{ textAlign: 'center' }} />
           <Text className='label'>体重 (kg)</Text>
-          <Input className='input-field' type='digit' placeholder='请输入体重' value={weight} onInput={e => setWeight(e.detail.value)} />
+          <Input className='input-field input-field-center h5-text-center' type='digit' placeholder='请输入体重' placeholderClass='input-placeholder' value={weight} onInput={e => setWeight(e.detail.value)} style={{ textAlign: 'center' }} />
         </View>
         <View className='calc-btn' onClick={calculate}>计算BMI</View>
         {result && (

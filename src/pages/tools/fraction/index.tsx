@@ -85,12 +85,15 @@ export default function Fraction() {
             {questions.map((q, i) => (
               <View key={i} className='question-row'>
                 <Text className='question-text'>{q.question} =</Text>
-                <Input
-                  className='question-input'
-                  placeholder='如 1/3'
-                  value={answers[i] || ''}
-                  onInput={e => check(i, e.detail.value)}
-                />
+                 <View className='input-wrapper'>
+                   {!answers[i] && <Text className='placeholder-text'>如 1/3</Text>}
+                   <Input
+                     className='question-input'
+                     placeholder=' '
+                     value={answers[i] || ''}
+                     onInput={e => check(i, e.detail.value)}
+                   />
+                 </View>
                 {answers[i] && (
                   <Text className={`answer-status ${isCorrect(i) ? 'correct' : 'wrong'}`}>
                     {isCorrect(i) ? '✓' : '✗'}

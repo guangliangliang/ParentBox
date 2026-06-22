@@ -36,7 +36,7 @@ export default function Idiom() {
       <View className='scroll-content'>
         <View className='form-card'>
           <Text className='label'>输入成语</Text>
-          <Input className='input-field' placeholder='请输入一个成语' value={input} onInput={e => setInput(e.detail.value)} />
+          <Input className='input-field input-field-center h5-text-center' placeholder='请输入一个成语' placeholderClass='input-placeholder' value={input} onInput={e => setInput(e.detail.value)} style={{ textAlign: 'center' }} />
         </View>
         <View className='calc-btn' onClick={search}>接龙查询</View>
         {results.length > 0 && (

@@ -73,13 +73,16 @@ export default function OralMath() {
             {questions.map((q, i) => (
               <View key={i} className='question-row'>
                 <Text className='question-text'>{q.question}</Text>
-                <Input
-                  className='question-input'
-                  type='number'
-                  placeholder='?'
-                  value={answers[i] || ''}
-                  onInput={e => checkAnswer(i, e.detail.value)}
-                />
+                 <View className='input-wrapper'>
+                   {!answers[i] && <Text className='placeholder-text'>?</Text>}
+                   <Input
+                     className='question-input'
+                     type='number'
+                     placeholder=' '
+                     value={answers[i] || ''}
+                     onInput={e => checkAnswer(i, e.detail.value)}
+                   />
+                 </View>
                 {answers[i] && (
                   <Text className={`answer-status ${parseInt(answers[i]) === q.answer ? 'correct' : 'wrong'}`}>
                     {parseInt(answers[i]) === q.answer ? '✓' : '✗'}
