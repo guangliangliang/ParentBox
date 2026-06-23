@@ -88,10 +88,11 @@ export default function Fraction() {
                  <View className='input-wrapper'>
                    {!answers[i] && <Text className='placeholder-text'>如 1/3</Text>}
                    <Input
-                     className='question-input'
+                     className='question-input input-field-center h5-text-center'
                      placeholder=' '
                      value={answers[i] || ''}
                      onInput={e => check(i, e.detail.value)}
+                     style={{ textAlign: 'center' }}
                    />
                  </View>
                 {answers[i] && (

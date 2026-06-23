@@ -76,11 +76,12 @@ export default function OralMath() {
                  <View className='input-wrapper'>
                    {!answers[i] && <Text className='placeholder-text'>?</Text>}
                    <Input
-                     className='question-input'
+                     className='question-input input-field-center h5-text-center'
                      type='number'
                      placeholder=' '
                      value={answers[i] || ''}
                      onInput={e => checkAnswer(i, e.detail.value)}
+                     style={{ textAlign: 'center' }}
                    />
                  </View>
                 {answers[i] && (
