@@ -41,7 +41,6 @@ export const tools: ToolItem[] = [
   { id: 'bmi', name: 'BMI计算', icon: '📊', category: 'toddler', keywords: ['BMI', '体质', '体重指数'] },
   { id: 'oral-math', name: '口算生成器', icon: '🧮', category: 'student', keywords: ['口算', '练习', '数学', '算术'] },
   { id: 'fraction', name: '分数练习', icon: '🔢', category: 'student', keywords: ['分数', '练习', '数学'] },
-  { id: 'idiom', name: '成语接龙', icon: '📖', category: 'student', keywords: ['成语', '接龙', '语文'] },
   { id: 'exam-countdown', name: '考试倒计时', icon: '⏰', category: 'student', keywords: ['考试', '倒计时', '日期'] },
   { id: 'holiday-countdown', name: '寒暑假倒计时', icon: '🏖️', category: 'student', keywords: ['暑假', '寒假', '假期', '倒计时'] },
   { id: 'relation', name: '亲戚称呼计算器', icon: '👨‍👩‍👧‍👦', category: 'family', keywords: ['亲戚', '称呼', '辈分'] },

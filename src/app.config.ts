@@ -14,7 +14,6 @@ export default defineAppConfig({
     'pages/tools/bmi/index',
     'pages/tools/oral-math/index',
     'pages/tools/fraction/index',
-    'pages/tools/idiom/index',
     'pages/tools/exam-countdown/index',
     'pages/tools/holiday-countdown/index',
     'pages/tools/relation/index',

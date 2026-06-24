@@ -75,14 +75,15 @@ export default function OralMath() {
                 <Text className='question-text'>{q.question}</Text>
                  <View className='input-wrapper'>
                    {!answers[i] && <Text className='placeholder-text'>?</Text>}
-                   <Input
-                     className='question-input input-field-center h5-text-center'
-                     type='number'
-                     placeholder=' '
-                     value={answers[i] || ''}
-                     onInput={e => checkAnswer(i, e.detail.value)}
-                     style={{ textAlign: 'center' }}
-                   />
+                    <Input
+                      className='question-input input-field-center h5-text-center'
+                      type='text'
+                      placeholder=' '
+                      placeholderClass='input-placeholder'
+                      value={answers[i] || ''}
+                      onInput={e => checkAnswer(i, e.detail.value)}
+                      style={{ textAlign: 'center', verticalAlign: 'middle' }}
+                    />
                  </View>
                 {answers[i] && (
                   <Text className={`answer-status ${parseInt(answers[i]) === q.answer ? 'correct' : 'wrong'}`}>
