@@ -26,6 +26,12 @@ export default defineConfig({
     '@': path.resolve(__dirname, '..', 'src')
   },
   mini: {
+    copy: {
+      patterns: [
+        { from: 'src/assets/timer-alert.mp3', to: 'dist/assets/timer-alert.mp3' }
+      ],
+      options: {}
+    },
     postcss: {
       pxtransform: {
         enable: true,

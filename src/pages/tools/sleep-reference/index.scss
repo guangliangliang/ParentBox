@@ -67,11 +67,26 @@
     padding: 12px 0;
   }
 
-  .bullet-dot, .check-box {
+  .bullet-dot {
     color: $primary-color;
     font-size: 30px;
     margin-right: 14px;
     line-height: 1.45;
+  }
+
+  .check-box {
+    width: 34px;
+    height: 34px;
+    border: 2px solid $border-color;
+    border-radius: 8px;
+    color: #fff;
+    background: #fff;
+    font-size: 26px;
+    line-height: 34px;
+    text-align: center;
+    margin-right: 14px;
+    margin-top: 4px;
+    flex-shrink: 0;
   }
 
   .bullet-text, .check-text {
@@ -79,6 +94,59 @@
     color: $text-primary;
     font-size: 28px;
     line-height: 1.5;
+  }
+
+  .check-row.checked {
+    .check-box {
+      background: $primary-color;
+      border-color: $primary-color;
+    }
+
+    .check-text {
+      color: $text-hint;
+      text-decoration: line-through;
+    }
+  }
+
+  .mode-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .mode-card {
+    border: 1px solid $border-color;
+    border-radius: $radius-sm;
+    background: #f7fafb;
+    padding: 18px 20px;
+
+    &.active {
+      border-color: $primary-color;
+      background: #fff4ed;
+    }
+  }
+
+  .mode-name {
+    display: block;
+    color: $text-primary;
+    font-size: 30px;
+    font-weight: 800;
+    margin-bottom: 8px;
+  }
+
+  .mode-time {
+    display: block;
+    color: $primary-color;
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+
+  .mode-desc {
+    display: block;
+    color: $text-secondary;
+    font-size: 24px;
+    line-height: 1.45;
   }
 
   .timer-card {
@@ -95,6 +163,13 @@
     color: $text-secondary;
     font-size: 30px;
     font-weight: 700;
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  .cycle-text {
+    color: $text-hint;
+    font-size: 26px;
     display: block;
     margin-bottom: 12px;
   }
@@ -126,6 +201,38 @@
     font-size: 26px;
   }
 
+  .sound-row {
+    background: $card-bg;
+    border-radius: $radius-md;
+    padding: 22px 26px;
+    border: 1px solid rgba(232, 238, 242, 0.95);
+    box-shadow: $shadow-card;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+  }
+
+  .sound-label {
+    color: $text-primary;
+    font-size: 28px;
+    font-weight: 800;
+  }
+
+  .sound-switch {
+    color: $text-hint;
+    background: #f0f4f6;
+    border-radius: 999px;
+    padding: 10px 20px;
+    font-size: 24px;
+    font-weight: 700;
+
+    &.active {
+      color: #fff;
+      background: linear-gradient(135deg, $primary-color, $warm-pink);
+    }
+  }
+
   .timer-actions {
     display: flex;
     gap: 14px;
@@ -148,5 +255,56 @@
       border-color: transparent;
       background: linear-gradient(135deg, $primary-color, $warm-pink);
     }
+  }
+
+  .notice-mask {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+    background: rgba(35, 35, 35, 0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    box-sizing: border-box;
+  }
+
+  .notice-card {
+    width: 100%;
+    background: #fff;
+    border-radius: 36px;
+    padding: 48px 34px 34px;
+    text-align: center;
+    box-shadow: 0 24px 70px rgba(35, 35, 35, 0.22);
+    box-sizing: border-box;
+  }
+
+  .notice-title {
+    display: block;
+    color: $primary-color;
+    font-size: 46px;
+    line-height: 1.25;
+    font-weight: 900;
+    margin-bottom: 18px;
+  }
+
+  .notice-desc {
+    display: block;
+    color: $text-secondary;
+    font-size: 30px;
+    line-height: 1.55;
+    margin-bottom: 34px;
+  }
+
+  .notice-btn {
+    color: #fff;
+    background: linear-gradient(135deg, $primary-color, $warm-pink);
+    border-radius: 999px;
+    padding: 24px 20px;
+    font-size: 30px;
+    font-weight: 900;
   }
 }

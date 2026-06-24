@@ -67,9 +67,7 @@ export const emergencyPhones = [
   { name: '消防救援', phone: '119' },
   { name: '交通事故', phone: '122' },
   { name: '政务服务热线', phone: '12345' },
-  { name: '消费者投诉', phone: '12315' },
-  { name: '儿童紧急联系人', phone: '请自行备注' },
-  { name: '附近医院电话', phone: '请自行备注' }
+  { name: '消费者投诉', phone: '12315' }
 ]
 
 export const medicineKit = [
