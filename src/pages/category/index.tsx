@@ -1,7 +1,7 @@
-import { useState, useMemo } from 'react'
+import { useState, useMemo, useEffect } from 'react'
 import { View, Text } from '@tarojs/components'
 import Taro, { useDidShow } from '@tarojs/taro'
-import { tools, categories, getAndClearPendingCategory } from '@/data/tools'
+import { tools, categories, getAndClearPendingCategory, getCurrentCategory, setCurrentCategory } from '@/data/tools'
 import './index.scss'
 
 export default function Category() {
@@ -12,9 +12,13 @@ export default function Category() {
     if (pendingCategory) {
       setActiveCategory(pendingCategory)
     } else {
-      setActiveCategory('all')
+      setActiveCategory(getCurrentCategory())
     }
   })
+
+  useEffect(() => {
+    setCurrentCategory(activeCategory)
+  }, [activeCategory])
 
   const filteredTools = useMemo(() => {
     if (activeCategory === 'all') return tools

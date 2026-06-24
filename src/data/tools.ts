@@ -12,6 +12,7 @@ export type ToolItem = {
 }
 
 let _pendingCategory: string | null = null
+let _currentCategory: string = 'all'
 
 export const setPendingCategory = (id: string) => { _pendingCategory = id }
 export const getAndClearPendingCategory = () => {
@@ -19,6 +20,9 @@ export const getAndClearPendingCategory = () => {
   _pendingCategory = null
   return result
 }
+
+export const setCurrentCategory = (id: string) => { _currentCategory = id }
+export const getCurrentCategory = () => { return _currentCategory }
 
 export const categories: CategoryItem[] = [
   { id: 'pregnancy', name: '孕期' },
