@@ -14,9 +14,12 @@ export default defineAppConfig({
     'pages/tools/teeth/index',
     'pages/tools/height-standard/index',
     'pages/tools/weight-standard/index',
+    'pages/tools/baby-care-products/index',
+    'pages/tools/bath-water-temp/index',
     'pages/tools/height-predict/index',
     'pages/tools/bmi/index',
     'pages/tools/clothing-size/index',
+    'pages/tools/shoe-size/index',
     'pages/tools/oral-math/index',
     'pages/tools/multiplication/index',
     'pages/tools/homework-timer/index',
@@ -30,7 +33,10 @@ export default defineAppConfig({
     'pages/tools/medicine-kit/index',
     'pages/tools/travel-list/index',
     'pages/tools/zodiac/index',
-    'pages/tools/constellation/index'
+    'pages/tools/constellation/index',
+    'pages/tools/blood-type/index',
+    'pages/tools/unit-converter/index',
+    'pages/tools/age-calculator/index'
   ],
   tabBar: {
     color: '#9aa8b3',

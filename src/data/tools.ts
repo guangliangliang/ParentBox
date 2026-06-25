@@ -45,9 +45,12 @@ export const tools: ToolItem[] = [
   { id: 'teeth', name: '长牙时间表', icon: '🦷', category: 'newborn', keywords: ['长牙', '出牙', '乳牙'] },
   { id: 'height-standard', name: '儿童身高标准', icon: '📏', category: 'newborn', keywords: ['身高', '标准', '身高表'] },
   { id: 'weight-standard', name: '儿童体重标准', icon: '⚖️', category: 'newborn', keywords: ['体重', '标准', '体重表'] },
+  { id: 'baby-care-products', name: '婴儿洗护用品清单', icon: '🧴', category: 'newborn', keywords: ['洗护', '用品', '清单'] },
+  { id: 'bath-water-temp', name: '婴儿洗澡水温参考', icon: '🛁', category: 'newborn', keywords: ['洗澡', '水温', '温度'] },
   { id: 'height-predict', name: '身高预测', icon: '📐', category: 'toddler', keywords: ['身高', '预测', '遗传'] },
   { id: 'bmi', name: 'BMI计算', icon: '📊', category: 'toddler', keywords: ['BMI', '体质', '体重指数'] },
   { id: 'clothing-size', name: '衣服尺码参考', icon: '👕', category: 'toddler', keywords: ['衣服', '尺码', '身高'] },
+  { id: 'shoe-size', name: '儿童鞋码对照表', icon: '👟', category: 'toddler', keywords: ['鞋码', '鞋子', '尺码'] },
   { id: 'oral-math', name: '口算生成器', icon: '🧮', category: 'student', keywords: ['口算', '练习', '数学', '算术'] },
   { id: 'multiplication', name: '乘法口诀练习', icon: '✖️', category: 'student', keywords: ['乘法', '口诀', '练习'] },
   { id: 'homework-timer', name: '作业番茄钟', icon: '⏳', category: 'student', keywords: ['作业', '番茄钟', '专注', '计时'] },
@@ -61,5 +64,8 @@ export const tools: ToolItem[] = [
   { id: 'medicine-kit', name: '家庭药箱清单', icon: '💊', category: 'family', keywords: ['药箱', '药品', '清单'] },
   { id: 'travel-list', name: '外出旅行清单', icon: '🧳', category: 'family', keywords: ['旅行', '外出', '清单'] },
   { id: 'zodiac', name: '生肖查询', icon: '🐉', category: 'family', keywords: ['生肖', '属相', '年份'] },
-  { id: 'constellation', name: '星座查询', icon: '⭐', category: 'family', keywords: ['星座', '生日', '占星'] }
+  { id: 'constellation', name: '星座查询', icon: '⭐', category: 'family', keywords: ['星座', '生日', '占星'] },
+  { id: 'blood-type', name: '血型遗传规律', icon: '🩸', category: 'family', keywords: ['血型', '遗传', '规律'] },
+  { id: 'unit-converter', name: '单位换算器', icon: '🔄', category: 'family', keywords: ['单位', '换算', '转换'] },
+  { id: 'age-calculator', name: '年龄/天数计算器', icon: '🎂', category: 'family', keywords: ['年龄', '天数', '计算'] }
 ]

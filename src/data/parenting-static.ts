@@ -83,3 +83,43 @@ export const travelList = [
   { title: '健康防护', items: ['常用药', '体温计', '防晒霜', '驱蚊用品'] },
   { title: '路上安抚', items: ['小零食', '绘本玩具', '备用袋', '薄毯'] }
 ]
+
+export const babyCareProducts = [
+  { title: '0-6个月', items: ['婴儿洗发水', '婴儿沐浴露', '婴儿润肤乳', '婴儿抚触油', '婴儿护臀膏', '婴儿洗衣液'] },
+  { title: '7-12个月', items: ['婴儿洗发水', '婴儿沐浴露', '婴儿润肤乳', '婴儿护臀膏', '婴儿洗衣液', '婴儿防晒霜'] },
+  { title: '1-3岁', items: ['儿童洗发水', '儿童沐浴露', '儿童润肤乳', '儿童牙膏（可吞咽）', '儿童防晒霜', '儿童洗衣液'] },
+  { title: '洗浴用品', items: ['婴儿洗澡盆', '洗澡网/洗澡架', '水温计', '婴儿浴巾', '小毛巾', '洗澡玩具'] }
+]
+
+export const bathWaterTemp = [
+  { age: '新生儿', temp: '37-38°C', note: '接近母体温度，手腕内侧试温不烫为宜' },
+  { age: '1-6个月', temp: '36-37°C', note: '比成人稍高，注意室温26-28°C' },
+  { age: '7-12个月', temp: '35-36°C', note: '可稍低一些，洗澡时间5-10分钟' },
+  { age: '1-3岁', temp: '34-36°C', note: '接近成人温度，注意洗澡时保暖' }
+]
+
+export const shoeSizeChart = [
+  { footLength: '11cm', cnSize: '16', euSize: '19', usSize: '3', age: '6-9个月' },
+  { footLength: '12cm', cnSize: '18', euSize: '20', usSize: '4', age: '9-12个月' },
+  { footLength: '13cm', cnSize: '20', euSize: '21', usSize: '5', age: '1-1.5岁' },
+  { footLength: '14cm', cnSize: '22', euSize: '22', usSize: '6', age: '1.5-2岁' },
+  { footLength: '15cm', cnSize: '24', euSize: '24', usSize: '7', age: '2-3岁' },
+  { footLength: '16cm', cnSize: '26', euSize: '25', usSize: '8', age: '3-4岁' },
+  { footLength: '17cm', cnSize: '28', euSize: '27', usSize: '9', age: '4-5岁' },
+  { footLength: '18cm', cnSize: '30', euSize: '28', usSize: '10', age: '5-6岁' },
+  { footLength: '19cm', cnSize: '32', euSize: '30', usSize: '11', age: '6-7岁' },
+  { footLength: '20cm', cnSize: '34', euSize: '31', usSize: '12', age: '7-8岁' }
+]
+
+export const bloodTypeRules = {
+  'A+A': ['A', 'O'],
+  'A+B': ['A', 'B', 'AB', 'O'],
+  'A+AB': ['A', 'B', 'AB'],
+  'A+O': ['A', 'O'],
+  'B+B': ['B', 'O'],
+  'B+AB': ['A', 'B', 'AB'],
+  'B+O': ['B', 'O'],
+  'AB+AB': ['A', 'B', 'AB'],
+  'AB+O': ['A', 'B'],
+  'O+O': ['O']
+}
