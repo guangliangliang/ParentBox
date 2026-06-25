@@ -32,6 +32,8 @@ export default defineAppConfig({
     'pages/tools/emergency-phone/index',
     'pages/tools/medicine-kit/index',
     'pages/tools/travel-list/index',
+    'pages/tools/document-list/index',
+    'pages/tools/school-prep/index',
     'pages/tools/zodiac/index',
     'pages/tools/constellation/index',
     'pages/tools/blood-type/index',

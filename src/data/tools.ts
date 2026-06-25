@@ -63,6 +63,8 @@ export const tools: ToolItem[] = [
   { id: 'emergency-phone', name: '紧急电话速查', icon: '☎️', category: 'family', keywords: ['紧急', '电话', '急救'] },
   { id: 'medicine-kit', name: '家庭药箱清单', icon: '💊', category: 'family', keywords: ['药箱', '药品', '清单'] },
   { id: 'travel-list', name: '外出旅行清单', icon: '🧳', category: 'family', keywords: ['旅行', '外出', '清单'] },
+  { id: 'document-list', name: '证件材料清单', icon: '📄', category: 'family', keywords: ['证件', '材料', '入园', '入学', '医保', '户口'] },
+  { id: 'school-prep', name: '开学准备清单', icon: '🎒', category: 'family', keywords: ['开学', '入园', '入学', '文具', '校服', '清单'] },
   { id: 'zodiac', name: '生肖查询', icon: '🐉', category: 'family', keywords: ['生肖', '属相', '年份'] },
   { id: 'constellation', name: '星座查询', icon: '⭐', category: 'family', keywords: ['星座', '生日', '占星'] },
   { id: 'blood-type', name: '血型遗传规律', icon: '🩸', category: 'family', keywords: ['血型', '遗传', '规律'] },
