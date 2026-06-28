@@ -54,3 +54,17 @@ export default function WeightStandard() {
     </View>
   )
 }
+
+WeightStandard.onShareAppMessage = function () {
+  return {
+    title: '儿童体重标准 - 家长工具库',
+    path: '/pages/tools/weight-standard/index'
+  }
+}
+
+WeightStandard.onShareTimeline = function () {
+  return {
+    title: '儿童体重标准 - 家长工具库',
+    query: ''
+  }
+}

@@ -76,3 +76,17 @@ export default function Constellation() {
     </View>
   )
 }
+
+Constellation.onShareAppMessage = function () {
+  return {
+    title: '星座查询 - 家长工具库',
+    path: '/pages/tools/constellation/index'
+  }
+}
+
+Constellation.onShareTimeline = function () {
+  return {
+    title: '星座查询 - 家长工具库',
+    query: ''
+  }
+}

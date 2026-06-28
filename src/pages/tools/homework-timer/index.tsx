@@ -183,3 +183,17 @@ export default function HomeworkTimer() {
     </View>
   )
 }
+
+HomeworkTimer.onShareAppMessage = function () {
+  return {
+    title: '作业番茄钟 - 家长工具库',
+    path: '/pages/tools/homework-timer/index'
+  }
+}
+
+HomeworkTimer.onShareTimeline = function () {
+  return {
+    title: '作业番茄钟 - 家长工具库',
+    query: ''
+  }
+}

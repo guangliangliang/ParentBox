@@ -12,3 +12,17 @@ export default function SchoolPrep() {
     />
   )
 }
+
+SchoolPrep.onShareAppMessage = function () {
+  return {
+    title: '开学准备清单 - 家长工具库',
+    path: '/pages/tools/school-prep/index'
+  }
+}
+
+SchoolPrep.onShareTimeline = function () {
+  return {
+    title: '开学准备清单 - 家长工具库',
+    query: ''
+  }
+}

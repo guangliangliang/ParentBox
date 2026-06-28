@@ -94,3 +94,17 @@ export default function Index() {
     </View>
   )
 }
+
+Index.onShareAppMessage = function () {
+  return {
+    title: '家长工具库 - 陪伴孩子成长每一步',
+    path: '/pages/index/index'
+  }
+}
+
+Index.onShareTimeline = function () {
+  return {
+    title: '家长工具库 - 陪伴孩子成长每一步',
+    query: ''
+  }
+}

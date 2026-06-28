@@ -30,3 +30,17 @@ export default function Vaccine() {
     </View>
   )
 }
+
+Vaccine.onShareAppMessage = function () {
+  return {
+    title: '疫苗时间表 - 家长工具库',
+    path: '/pages/tools/vaccine/index'
+  }
+}
+
+Vaccine.onShareTimeline = function () {
+  return {
+    title: '疫苗时间表 - 家长工具库',
+    query: ''
+  }
+}

@@ -30,3 +30,17 @@ export default function Teeth() {
     </View>
   )
 }
+
+Teeth.onShareAppMessage = function () {
+  return {
+    title: '长牙时间表 - 家长工具库',
+    path: '/pages/tools/teeth/index'
+  }
+}
+
+Teeth.onShareTimeline = function () {
+  return {
+    title: '长牙时间表 - 家长工具库',
+    query: ''
+  }
+}

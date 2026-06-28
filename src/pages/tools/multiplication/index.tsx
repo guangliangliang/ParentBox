@@ -67,3 +67,17 @@ export default function Multiplication() {
     </View>
   )
 }
+
+Multiplication.onShareAppMessage = function () {
+  return {
+    title: '乘法口诀练习 - 家长工具库',
+    path: '/pages/tools/multiplication/index'
+  }
+}
+
+Multiplication.onShareTimeline = function () {
+  return {
+    title: '乘法口诀练习 - 家长工具库',
+    query: ''
+  }
+}

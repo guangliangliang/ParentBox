@@ -58,3 +58,17 @@ export default function PregnancyWeek() {
     </View>
   )
 }
+
+PregnancyWeek.onShareAppMessage = function () {
+  return {
+    title: '孕周计算 - 家长工具库',
+    path: '/pages/tools/pregnancy-week/index'
+  }
+}
+
+PregnancyWeek.onShareTimeline = function () {
+  return {
+    title: '孕周计算 - 家长工具库',
+    query: ''
+  }
+}

@@ -27,3 +27,17 @@ export default function FoodGuide() {
     </View>
   )
 }
+
+FoodGuide.onShareAppMessage = function () {
+  return {
+    title: '宝宝辅食添加月龄表 - 家长工具库',
+    path: '/pages/tools/food-guide/index'
+  }
+}
+
+FoodGuide.onShareTimeline = function () {
+  return {
+    title: '宝宝辅食添加月龄表 - 家长工具库',
+    query: ''
+  }
+}

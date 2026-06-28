@@ -40,3 +40,17 @@ export default function BabyCareProducts() {
     </View>
   )
 }
+
+BabyCareProducts.onShareAppMessage = function () {
+  return {
+    title: '婴儿洗护用品清单 - 家长工具库',
+    path: '/pages/tools/baby-care-products/index'
+  }
+}
+
+BabyCareProducts.onShareTimeline = function () {
+  return {
+    title: '婴儿洗护用品清单 - 家长工具库',
+    query: ''
+  }
+}

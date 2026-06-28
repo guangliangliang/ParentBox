@@ -115,3 +115,17 @@ export default function BloodType() {
     </View>
   )
 }
+
+BloodType.onShareAppMessage = function () {
+  return {
+    title: '血型遗传规律 - 家长工具库',
+    path: '/pages/tools/blood-type/index'
+  }
+}
+
+BloodType.onShareTimeline = function () {
+  return {
+    title: '血型遗传规律 - 家长工具库',
+    query: ''
+  }
+}

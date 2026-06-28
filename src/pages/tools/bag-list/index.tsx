@@ -44,3 +44,17 @@ export default function BagList() {
     </View>
   )
 }
+
+BagList.onShareAppMessage = function () {
+  return {
+    title: '待产包清单 - 家长工具库',
+    path: '/pages/tools/bag-list/index'
+  }
+}
+
+BagList.onShareTimeline = function () {
+  return {
+    title: '待产包清单 - 家长工具库',
+    query: ''
+  }
+}

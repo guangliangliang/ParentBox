@@ -209,3 +209,17 @@ export default function UnitConverter() {
     </View>
   )
 }
+
+UnitConverter.onShareAppMessage = function () {
+  return {
+    title: '单位换算器 - 家长工具库',
+    path: '/pages/tools/unit-converter/index'
+  }
+}
+
+UnitConverter.onShareTimeline = function () {
+  return {
+    title: '单位换算器 - 家长工具库',
+    query: ''
+  }
+}

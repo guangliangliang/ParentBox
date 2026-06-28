@@ -31,3 +31,17 @@ export default function ClothingSize() {
     </View>
   )
 }
+
+ClothingSize.onShareAppMessage = function () {
+  return {
+    title: '衣服尺码参考 - 家长工具库',
+    path: '/pages/tools/clothing-size/index'
+  }
+}
+
+ClothingSize.onShareTimeline = function () {
+  return {
+    title: '衣服尺码参考 - 家长工具库',
+    query: ''
+  }
+}

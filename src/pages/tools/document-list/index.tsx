@@ -12,3 +12,17 @@ export default function DocumentList() {
     />
   )
 }
+
+DocumentList.onShareAppMessage = function () {
+  return {
+    title: '证件材料清单 - 家长工具库',
+    path: '/pages/tools/document-list/index'
+  }
+}
+
+DocumentList.onShareTimeline = function () {
+  return {
+    title: '证件材料清单 - 家长工具库',
+    query: ''
+  }
+}

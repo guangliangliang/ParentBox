@@ -65,3 +65,17 @@ export default function Category() {
     </View>
   )
 }
+
+Category.onShareAppMessage = function () {
+  return {
+    title: '家长工具库 - 陪伴孩子成长每一步',
+    path: '/pages/category/index'
+  }
+}
+
+Category.onShareTimeline = function () {
+  return {
+    title: '家长工具库 - 陪伴孩子成长每一步',
+    query: ''
+  }
+}

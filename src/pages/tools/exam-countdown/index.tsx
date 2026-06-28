@@ -65,3 +65,17 @@ export default function ExamCountdown() {
     </View>
   )
 }
+
+ExamCountdown.onShareAppMessage = function () {
+  return {
+    title: '考试倒计时 - 家长工具库',
+    path: '/pages/tools/exam-countdown/index'
+  }
+}
+
+ExamCountdown.onShareTimeline = function () {
+  return {
+    title: '考试倒计时 - 家长工具库',
+    query: ''
+  }
+}

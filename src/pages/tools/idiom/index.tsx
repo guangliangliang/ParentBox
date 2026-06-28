@@ -58,3 +58,17 @@ export default function Idiom() {
     </View>
   )
 }
+
+Idiom.onShareAppMessage = function () {
+  return {
+    title: '成语词典 - 家长工具库',
+    path: '/pages/tools/idiom/index'
+  }
+}
+
+Idiom.onShareTimeline = function () {
+  return {
+    title: '成语词典 - 家长工具库',
+    query: ''
+  }
+}

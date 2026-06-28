@@ -39,3 +39,17 @@ export default function ShoeSize() {
     </View>
   )
 }
+
+ShoeSize.onShareAppMessage = function () {
+  return {
+    title: '儿童鞋码对照表 - 家长工具库',
+    path: '/pages/tools/shoe-size/index'
+  }
+}
+
+ShoeSize.onShareTimeline = function () {
+  return {
+    title: '儿童鞋码对照表 - 家长工具库',
+    query: ''
+  }
+}

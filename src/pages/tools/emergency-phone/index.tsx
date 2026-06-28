@@ -26,3 +26,17 @@ export default function EmergencyPhone() {
     </View>
   )
 }
+
+EmergencyPhone.onShareAppMessage = function () {
+  return {
+    title: '紧急电话速查 - 家长工具库',
+    path: '/pages/tools/emergency-phone/index'
+  }
+}
+
+EmergencyPhone.onShareTimeline = function () {
+  return {
+    title: '紧急电话速查 - 家长工具库',
+    query: ''
+  }
+}

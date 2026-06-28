@@ -29,3 +29,17 @@ export default function Milestone() {
     </View>
   )
 }
+
+Milestone.onShareAppMessage = function () {
+  return {
+    title: '宝宝发育里程碑 - 家长工具库',
+    path: '/pages/tools/milestone/index'
+  }
+}
+
+Milestone.onShareTimeline = function () {
+  return {
+    title: '宝宝发育里程碑 - 家长工具库',
+    query: ''
+  }
+}

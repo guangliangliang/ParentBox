@@ -98,3 +98,17 @@ export default function OralMath() {
     </View>
   )
 }
+
+OralMath.onShareAppMessage = function () {
+  return {
+    title: '口算生成器 - 家长工具库',
+    path: '/pages/tools/oral-math/index'
+  }
+}
+
+OralMath.onShareTimeline = function () {
+  return {
+    title: '口算生成器 - 家长工具库',
+    query: ''
+  }
+}

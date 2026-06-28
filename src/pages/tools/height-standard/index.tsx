@@ -54,3 +54,17 @@ export default function HeightStandard() {
     </View>
   )
 }
+
+HeightStandard.onShareAppMessage = function () {
+  return {
+    title: '儿童身高标准 - 家长工具库',
+    path: '/pages/tools/height-standard/index'
+  }
+}
+
+HeightStandard.onShareTimeline = function () {
+  return {
+    title: '儿童身高标准 - 家长工具库',
+    query: ''
+  }
+}

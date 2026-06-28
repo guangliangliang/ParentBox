@@ -29,3 +29,17 @@ export default function VaccineNotes() {
     </View>
   )
 }
+
+VaccineNotes.onShareAppMessage = function () {
+  return {
+    title: '疫苗接种注意事项 - 家长工具库',
+    path: '/pages/tools/vaccine-notes/index'
+  }
+}
+
+VaccineNotes.onShareTimeline = function () {
+  return {
+    title: '疫苗接种注意事项 - 家长工具库',
+    query: ''
+  }
+}

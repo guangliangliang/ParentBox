@@ -28,3 +28,17 @@ export default function SleepReference() {
     </View>
   )
 }
+
+SleepReference.onShareAppMessage = function () {
+  return {
+    title: '睡眠时长参考表 - 家长工具库',
+    path: '/pages/tools/sleep-reference/index'
+  }
+}
+
+SleepReference.onShareTimeline = function () {
+  return {
+    title: '睡眠时长参考表 - 家长工具库',
+    query: ''
+  }
+}

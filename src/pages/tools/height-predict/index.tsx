@@ -59,3 +59,17 @@ export default function HeightPredict() {
     </View>
   )
 }
+
+HeightPredict.onShareAppMessage = function () {
+  return {
+    title: '身高预测 - 家长工具库',
+    path: '/pages/tools/height-predict/index'
+  }
+}
+
+HeightPredict.onShareTimeline = function () {
+  return {
+    title: '身高预测 - 家长工具库',
+    query: ''
+  }
+}

@@ -51,3 +51,17 @@ export default function Zodiac() {
     </View>
   )
 }
+
+Zodiac.onShareAppMessage = function () {
+  return {
+    title: '生肖查询 - 家长工具库',
+    path: '/pages/tools/zodiac/index'
+  }
+}
+
+Zodiac.onShareTimeline = function () {
+  return {
+    title: '生肖查询 - 家长工具库',
+    query: ''
+  }
+}

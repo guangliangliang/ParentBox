@@ -57,3 +57,17 @@ export default function BMI() {
     </View>
   )
 }
+
+BMI.onShareAppMessage = function () {
+  return {
+    title: 'BMI计算 - 家长工具库',
+    path: '/pages/tools/bmi/index'
+  }
+}
+
+BMI.onShareTimeline = function () {
+  return {
+    title: 'BMI计算 - 家长工具库',
+    query: ''
+  }
+}

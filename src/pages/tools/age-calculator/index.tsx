@@ -208,3 +208,17 @@ export default function AgeCalculator() {
     </View>
   )
 }
+
+AgeCalculator.onShareAppMessage = function () {
+  return {
+    title: '年龄/天数计算器 - 家长工具库',
+    path: '/pages/tools/age-calculator/index'
+  }
+}
+
+AgeCalculator.onShareTimeline = function () {
+  return {
+    title: '年龄/天数计算器 - 家长工具库',
+    query: ''
+  }
+}

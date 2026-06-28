@@ -82,3 +82,17 @@ export default function HolidayCountdown() {
     </View>
   )
 }
+
+HolidayCountdown.onShareAppMessage = function () {
+  return {
+    title: '寒暑假倒计时 - 家长工具库',
+    path: '/pages/tools/holiday-countdown/index'
+  }
+}
+
+HolidayCountdown.onShareTimeline = function () {
+  return {
+    title: '寒暑假倒计时 - 家长工具库',
+    query: ''
+  }
+}

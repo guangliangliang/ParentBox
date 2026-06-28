@@ -40,3 +40,17 @@ export default function TravelList() {
     </View>
   )
 }
+
+TravelList.onShareAppMessage = function () {
+  return {
+    title: '外出旅行清单 - 家长工具库',
+    path: '/pages/tools/travel-list/index'
+  }
+}
+
+TravelList.onShareTimeline = function () {
+  return {
+    title: '外出旅行清单 - 家长工具库',
+    query: ''
+  }
+}

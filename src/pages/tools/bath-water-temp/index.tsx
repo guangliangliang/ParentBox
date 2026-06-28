@@ -28,3 +28,17 @@ export default function BathWaterTemp() {
     </View>
   )
 }
+
+BathWaterTemp.onShareAppMessage = function () {
+  return {
+    title: '婴儿洗澡水温参考 - 家长工具库',
+    path: '/pages/tools/bath-water-temp/index'
+  }
+}
+
+BathWaterTemp.onShareTimeline = function () {
+  return {
+    title: '婴儿洗澡水温参考 - 家长工具库',
+    query: ''
+  }
+}

@@ -136,3 +136,17 @@ export default function Relation() {
     </View>
   )
 }
+
+Relation.onShareAppMessage = function () {
+  return {
+    title: '亲戚称呼计算器 - 家长工具库',
+    path: '/pages/tools/relation/index'
+  }
+}
+
+Relation.onShareTimeline = function () {
+  return {
+    title: '亲戚称呼计算器 - 家长工具库',
+    query: ''
+  }
+}

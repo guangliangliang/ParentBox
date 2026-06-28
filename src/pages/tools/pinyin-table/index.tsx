@@ -26,3 +26,17 @@ export default function PinyinTable() {
     </View>
   )
 }
+
+PinyinTable.onShareAppMessage = function () {
+  return {
+    title: '拼音声母韵母表 - 家长工具库',
+    path: '/pages/tools/pinyin-table/index'
+  }
+}
+
+PinyinTable.onShareTimeline = function () {
+  return {
+    title: '拼音声母韵母表 - 家长工具库',
+    query: ''
+  }
+}

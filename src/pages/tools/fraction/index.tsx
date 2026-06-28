@@ -109,3 +109,17 @@ export default function Fraction() {
     </View>
   )
 }
+
+Fraction.onShareAppMessage = function () {
+  return {
+    title: '分数练习 - 家长工具库',
+    path: '/pages/tools/fraction/index'
+  }
+}
+
+Fraction.onShareTimeline = function () {
+  return {
+    title: '分数练习 - 家长工具库',
+    query: ''
+  }
+}

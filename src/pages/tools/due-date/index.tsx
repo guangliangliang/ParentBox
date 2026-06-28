@@ -85,3 +85,17 @@ export default function DueDate() {
     </View>
   )
 }
+
+DueDate.onShareAppMessage = function () {
+  return {
+    title: '预产期计算 - 家长工具库',
+    path: '/pages/tools/due-date/index'
+  }
+}
+
+DueDate.onShareTimeline = function () {
+  return {
+    title: '预产期计算 - 家长工具库',
+    query: ''
+  }
+}

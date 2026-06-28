@@ -31,3 +31,17 @@ export default function CheckupList() {
     </View>
   )
 }
+
+CheckupList.onShareAppMessage = function () {
+  return {
+    title: '产检时间表 - 家长工具库',
+    path: '/pages/tools/checkup-list/index'
+  }
+}
+
+CheckupList.onShareTimeline = function () {
+  return {
+    title: '产检时间表 - 家长工具库',
+    query: ''
+  }
+}

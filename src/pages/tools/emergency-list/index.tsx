@@ -40,3 +40,17 @@ export default function EmergencyList() {
     </View>
   )
 }
+
+EmergencyList.onShareAppMessage = function () {
+  return {
+    title: '家庭应急清单 - 家长工具库',
+    path: '/pages/tools/emergency-list/index'
+  }
+}
+
+EmergencyList.onShareTimeline = function () {
+  return {
+    title: '家庭应急清单 - 家长工具库',
+    query: ''
+  }
+}

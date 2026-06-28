@@ -40,3 +40,17 @@ export default function MedicineKit() {
     </View>
   )
 }
+
+MedicineKit.onShareAppMessage = function () {
+  return {
+    title: '家庭药箱清单 - 家长工具库',
+    path: '/pages/tools/medicine-kit/index'
+  }
+}
+
+MedicineKit.onShareTimeline = function () {
+  return {
+    title: '家庭药箱清单 - 家长工具库',
+    query: ''
+  }
+}
