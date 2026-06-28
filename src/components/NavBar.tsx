@@ -3,7 +3,12 @@ import Taro from '@tarojs/taro'
 
 export default function NavBar() {
   const handleBack = () => {
-    Taro.navigateBack()
+    const pages = Taro.getCurrentPages()
+    if (pages.length > 1) {
+      Taro.navigateBack()
+    } else {
+      Taro.switchTab({ url: '/pages/index/index' })
+    }
   }
 
   return (
